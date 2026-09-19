@@ -57,7 +57,11 @@ The implementation may change over time as I learn better approaches and discove
 
 This project is a continuation of my C# learning journey.
 
-My previous project, [Yori's Calculator](https://github.com/c0deplanb/Yori-Calculator-Project), was a simple console calculator I created while learning the fundamentals of C#.
+## Actually..
+
+This project originally started as a small experiment while working on a Unity game. I wanted to understand how Mathf.Clamp worked internally, so I decided to create my own version in pure C#.
+While working on it, I kept adding more mathematical functions for practice, and the project gradually turned into a small mathematics library.
+This is currently a one-day learning project and will probably continue to evolve as I learn more C#.
 
 CustomMath is a more advanced version of that learning process, focusing on reusable mathematical functions and building a small library from scratch.
 
