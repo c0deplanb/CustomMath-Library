@@ -53,6 +53,11 @@ This project is actively being developed as I learn more about C#.
 
 The implementation may change over time as I learn better approaches and discover new mathematical operations.
 
-## License
+## Project History
 
-This project is primarily intended for learning and experimentation.
+This project is a continuation of my C# learning journey.
+
+My previous project, [Yori's Calculator](https://github.com/c0deplanb/Yori-Calculator-Project), was a simple console calculator I created while learning the fundamentals of C#.
+
+CustomMath is a more advanced version of that learning process, focusing on reusable mathematical functions and building a small library from scratch.
+
