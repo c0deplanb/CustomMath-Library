@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace Common
 {
-    public static class CustomMath //Kendi matematik API yazıyorum.
-        //Şahsen 16 aldım cart curt yani bu ikisinden sonra tıkandım aşkım GPT'ye sorcam
+    public static class CustomMath
+        
     {
         public static float LimitFloat(float min, float value, float max)
         {
@@ -79,7 +79,7 @@ namespace Common
         {
             float result = 1f;
 
-            if (value < 0f) //piç herif karakök alırken neden eski sayı yazıyosun orrrrrrrospou cocuguduuhgufhb
+            if (value < 0f)
             {
                 Debug.Log("Result cannot be negative number");
                 return 0f;
@@ -102,7 +102,7 @@ namespace Common
 
         public static int DivisionInt(int Dividend, int Divisor)
         {
-            if (Divisor == 0) // orrrospuı cocugu eğper 0 bölen gelirtse hjata verme ananı sikerim
+            if (Divisor == 0)
             {
                 Divisor++;
                 return Dividend / Divisor;
@@ -115,7 +115,7 @@ namespace Common
         {
             if (value < 0)
             {
-                return value *= -1; //sayıyı pozitif yapar
+                return value *= -1;
             }
             return value;
         }
