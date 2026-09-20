@@ -1,6 +1,9 @@
+using UnityEngine;
+
 namespace Common
 {
-    public static class CustomMath
+    public static class CustomMath //Kendi matematik API yazıyorum.
+        //Şahsen 16 aldım cart curt yani bu ikisinden sonra tıkandım aşkım GPT'ye sorcam
     {
         public static float LimitFloat(float min, float value, float max)
         {
@@ -28,15 +31,15 @@ namespace Common
 
         }
         public static int SubInt(params int[] numbers)
-        { 
+        {
             int result = numbers[0];
-            foreach (int intnumber in numbers) { result -= intnumber;}
+            foreach (int intnumber in numbers) { result -= intnumber; }
             return result;
         }
         public static float SubFloat(params float[] numbers)
         {
             float result = numbers[0];
-            foreach(float floatnum in numbers) { result -= floatnum;}
+            foreach (float floatnum in numbers) { result -= floatnum; }
             return result;
         }
         public static int MultiInt(params int[] numbers)
@@ -76,12 +79,45 @@ namespace Common
         {
             float result = 1f;
 
-            if (value < 0f)
+            if (value < 0f) //piç herif karakök alırken neden eski sayı yazıyosun orrrrrrrospou cocuguduuhgufhb
             {
+                Debug.Log("Result cannot be negative number");
                 return 0f;
             }
             result = PowerFloat(value, 0.5f);
+            Debug.Log(result);
             return result;
+        }
+
+        public static float DivisionFloat(float Dividend, float Divisor)
+        {
+            if (Divisor == 0f)
+            {
+                Divisor++;
+                return Dividend / Divisor;
+            }
+
+            return Dividend / Divisor;
+        }
+
+        public static int DivisionInt(int Dividend, int Divisor)
+        {
+            if (Divisor == 0) // orrrospuı cocugu eğper 0 bölen gelirtse hjata verme ananı sikerim
+            {
+                Divisor++;
+                return Dividend / Divisor;
+            }
+
+            return Dividend / Divisor;
+        }
+
+        public static int Absolute(int value)
+        {
+            if (value < 0)
+            {
+                return value *= -1; //sayıyı pozitif yapar
+            }
+            return value;
         }
 
         public static float Average(params float[] numbers)
