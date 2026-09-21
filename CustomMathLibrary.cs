@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//If you are NOT using Unity, adjust it.
+
 namespace Common
 {
     public static class CustomMath
@@ -68,7 +70,7 @@ namespace Common
         {
             float result = 1f;
 
-            for (int i = 0; i < uppernumber; i++)
+            for (float i = 0; i < uppernumber; i++)
             {
                 result *= value;
             }
@@ -77,14 +79,19 @@ namespace Common
 
         public static float SquareRoot(float value)
         {
-            float result = 1f;
+            float result = value;
+
+            float lastResult;
 
             if (value < 0f)
             {
                 Debug.Log("Result cannot be negative number");
                 return 0f;
             }
-            result = PowerFloat(value, 0.5f);
+            while (result < 0.00001f)
+            {
+
+            }
             Debug.Log(result);
             return result;
         }
@@ -93,8 +100,8 @@ namespace Common
         {
             if (Divisor == 0f)
             {
-                Divisor++;
-                return Dividend / Divisor;
+                Debug.Log("Divisor cannot be 0");
+                return 0f;
             }
 
             return Dividend / Divisor;
@@ -104,14 +111,23 @@ namespace Common
         {
             if (Divisor == 0)
             {
-                Divisor++;
-                return Dividend / Divisor;
+                Debug.Log("Divisor cannot be 0");
+                return 0;
             }
 
             return Dividend / Divisor;
         }
 
         public static int Absolute(int value)
+        {
+            if (value < 0)
+            {
+                return value *= -1;
+            }
+            return value;
+        }
+
+        public static float AbsoluteFloat(float value)
         {
             if (value < 0)
             {
