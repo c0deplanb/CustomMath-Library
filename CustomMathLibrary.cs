@@ -1,16 +1,16 @@
-using UnityEngine;
+using System.Diagnostics;
 
 //If you are NOT using Unity, adjust it.
 
 namespace Common
 {
     public static class CustomMath
-        
+
     {
         public static float LimitFloat(float min, float value, float max)
         {
-            if (value < min) { value = min; return value;}
-            if (value > max) { value = max; return value;}
+            if (value < min) { value = min; return value; }
+            if (value > max) { value = max; return value; }
             return value;
         }
         public static int LimitInt(int min, int value, int max)
@@ -22,13 +22,13 @@ namespace Common
         public static int AddInt(params int[] numbers)
         {
             int result = 0;
-            foreach (int intnumber in numbers) { result += intnumber;}
+            foreach (int intnumber in numbers) { result += intnumber; }
             return result;
         }
-        public static float AddFloat(params float[] numbers) 
+        public static float AddFloat(params float[] numbers)
         {
             float result = 0f;
-            foreach (float floatnum in numbers) {result += floatnum;}
+            foreach (float floatnum in numbers) { result += floatnum; }
             return result;
 
         }
@@ -47,16 +47,16 @@ namespace Common
         public static int MultiInt(params int[] numbers)
         {
             int result = 1;
-            foreach (int intnumber in numbers) { result *= intnumber;}
+            foreach (int intnumber in numbers) { result *= intnumber; }
             return result;
         }
         public static float MultiFloat(params float[] rudiismyidol)
         {
             float result = 1;
-            foreach(float number in rudiismyidol) {result *= number;}
+            foreach (float number in rudiismyidol) { result *= number; }
             return result;
         }
-        public static int PowerInt(int value, int uppernumber)
+        public static int PowerInt(int value, int uppernumber) //Limit = 2^31 = 0x80000000
         {
             int result = 1;
 
@@ -66,7 +66,7 @@ namespace Common
             }
             return result;
         }
-        public static float PowerFloat(float value, float uppernumber)
+        public static float PowerFloat(float value, float uppernumber) //0x4F000000
         {
             float result = 1f;
 
@@ -77,30 +77,11 @@ namespace Common
             return result;
         }
 
-        public static float SquareRoot(float value)
-        {
-            float result = value;
-
-            float lastResult;
-
-            if (value < 0f)
-            {
-                Debug.Log("Result cannot be negative number");
-                return 0f;
-            }
-            while (result < 0.00001f)
-            {
-
-            }
-            Debug.Log(result);
-            return result;
-        }
-
         public static float DivisionFloat(float Dividend, float Divisor)
         {
             if (Divisor == 0f)
             {
-                Debug.Log("Divisor cannot be 0");
+                Console.WriteLine("Divisor cannot be 0");
                 return 0f;
             }
 
@@ -111,7 +92,7 @@ namespace Common
         {
             if (Divisor == 0)
             {
-                Debug.Log("Divisor cannot be 0");
+                Console.WriteLine("Divisor cannot be 0");
                 return 0;
             }
 
